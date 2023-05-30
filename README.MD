@@ -18,9 +18,9 @@
         document.documentElement.setAttribute("data-theme",theme); // Get the theme from the document
 
         if(theme==="dark"){
-            btn.innerHTML=light;
-        }else{
             btn.innerHTML=dark;
+        }else{
+            btn.innerHTML=light;
         }
     }
     defineTheme(themeSystem);
