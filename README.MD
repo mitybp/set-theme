@@ -26,14 +26,14 @@
     defineTheme(themeSystem);
 
 ## Css
-        :root{
-            --dark: #222;
-            --light: #f2f2f2;
-            --purple: #9e6aff;
-            --purple-hover: #b187ff;
-        }
+    :root{
+        --dark: #222;
+        --light: #f2f2f2;
+        --purple: #9e6aff;
+        --purple-hover: #b187ff;
+    }
 
-        [data-theme="dark"]{ /* Invert the colors */
-            --light: #222;
-            --dark: #f2f2f2;
-        }
+    [data-theme="dark"]{ /* Invert the colors */
+        --light: #222;
+        --dark: #f2f2f2;
+    }
