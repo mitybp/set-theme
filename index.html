@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set theme</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <button id="btn">
+        <!-- <i class="bi bi-brightness-high-fill"></i> -->
+    </button>
+</body>
+<script>
+    const themeSystem=localStorage.getItem("themeSystem")||"light";
+    const btn=document.getElementById("btn")
+
+    btn.addEventListener("click",()=>{
+        let oldTheme=localStorage.getItem("themeSystem")||"light";
+        let newTheme=oldTheme==="light"?"dark":"light";
+        localStorage.setItem("themeSystem",newTheme)
+        defineTheme(newTheme);
+    })
+
+    defineTheme=(theme)=>{
+        const dark="<i class='bi bi-moon-stars-fill'></i>";
+        const light="<i class='bi bi-brightness-high-fill'></i>";
+
+        document.documentElement.setAttribute("data-theme",theme);
+
+        if(theme==="dark"){
+            btn.innerHTML=light;
+        }else{
+            btn.innerHTML=dark;
+        }
+    }
+    defineTheme(themeSystem);
+</script>
+</html>

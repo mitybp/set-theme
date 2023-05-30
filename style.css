@@ -1,0 +1,35 @@
+:root{
+    --dark: #222;
+    --light: #f2f2f2;
+    --purple: #9e6aff;
+    --purple-hover: #b187ff;
+}
+
+[data-theme="dark"]{
+    --light: #222;
+    --dark: #f2f2f2;
+}
+html{
+    transition: 0.3s;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    background-color: var(--dark);
+}
+button{
+    width: 80px;
+    height: 80px;
+    border: none;
+    background-color: var(--purple);
+    border-radius: 50%;
+    font-size: 30px;
+    color: var(--light);
+    cursor: pointer;
+}
+button:hover{
+    background-color: var(--purple-hover);
+    transition: 0.3s;
+}
