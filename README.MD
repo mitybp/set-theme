@@ -1,6 +1,5 @@
 # Set theme site
 
-### In script
     const themeSystem=localStorage.getItem("themeSystem")||"light"; // Get the theme from localStorage
     const btn=document.getElementById("btn");
 
